@@ -1,33 +1,94 @@
 #div-shape-box{
+    position: relative;
     height: 600px;
-    width: 600px;
+    width: 800px;
     background-color:wheat;
 }
 
-#rectangle{
+.rectangle{
     height: 100px;
     width: 50px;
+    position: absolute;
+    animation:
+    nudge 5s linear infinite alternate;
+}
+@keyframes nudge {
+    0%, 100% {
+      transform: translate(0,0);  
+    }
+    50% {
+        transform: translate(150px, 0);
+    }
+    80% {
+        transform: translate(-150px, 0);
+    }
 }
 
-#square{
+.square{
     height: 50px;
     width: 50px;
+    position: absolute;
+    animation: 
+    nudge 5s linear infinite alternate;
+}
+@keyframes nudge {
+    0%, 100% {
+      transform: translate(0,0);  
+    }
+    50% {
+        transform: translate(150px, 0);
+    }
+    80% {
+        transform: translate(-150px, 0);
+    }
 }
 
-#circle{
+.circle{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    position: absolute;
+    animation:
+    nudge 5s linear infinite alternate;
 }
 
-#triangle{
-    width: 20;
-    height: 20;
-    border-left: 100px;
-    border-right: 100px;
-    border-bottom: 150px; 
-}
-/* 
-.shapes{
+.triangle-topleft{
+    width: 0;
+    height: 0;
+    border-top: 100px solid wheat;
+    border-right: 100px solid transparent;
     position: absolute;
-} */
+    animation:
+    nudge 5s linear infinite alternate;  
+}
+ 
+.shapes{
+    display: inline-block;
+    margin: 5px;
+} 
+
+h4, h3, h1{
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626,#feab3a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 6s infinite linear;
+}
+
+@keyframes hue {
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#h4Name{
+    color: #f35626;
+
+}
+#h4Width{
+    
+}
